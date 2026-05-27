@@ -1,6 +1,6 @@
 # 🤖 AI Implementation Guide (AI.md)
 
-This document provides the technical specifications and operational protocols for AI agents tasked with installing, maintaining, or extending the `private-tools` MCP server.
+This document provides the technical specifications and operational protocols for AI agents tasked with installing, maintaining, or extending the `gemini-cli-mcp-private-tools` MCP server.
 
 ## ⚙️ Technical Specifications
 - **Runtime**: Python 3.10+
@@ -17,7 +17,7 @@ When deploying this server in a new environment, follow these exact steps:
    - Use `--scope user` for global availability.
    - The command must use the absolute path to the venv python executable and the `main.py` file.
    - Always include `--trust` to ensure seamless tool execution.
-   - **Example**: `gemini mcp add private-tools /absolute/path/to/mcp-private-tools/venv/bin/python /absolute/path/to/mcp-private-tools/main.py --scope user --trust`
+   - **Example**: `gemini mcp add gemini-cli-mcp-private-tools /absolute/path/to/gemini-cli-mcp-private-tools/venv/bin/python /absolute/path/to/gemini-cli-mcp-private-tools/main.py --scope user --trust`
 4. **Verification**: Execute `/mcp list` to confirm the server status is `Ready` and all tools are registered.
 
 ## 🧬 Extension Workflow

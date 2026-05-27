@@ -1,9 +1,9 @@
-# 🛠️ MCP Private Tools Core (for Gemini CLI)
+# 🛠️ Gemini CLI MCP Private Tools Core
 
 A professional, modular MCP (Model Context Protocol) server specifically designed to extend the capabilities of the **Gemini CLI**. This server provides high-quality, non-rate-limited tools that allow the AI to search the web and discover technical resources without the restrictions of built-in tools.
 
 ## 🎯 Purpose
-The `private-tools` server is a specialized extension for **Gemini CLI** users who need a more robust way to fetch real-time data. It replaces limited or unstable built-in tools with an optimized, local implementation.
+The `gemini-cli-mcp-private-tools` server is a specialized extension for **Gemini CLI** users who need a more robust way to fetch real-time data. It replaces limited or unstable built-in tools with an optimized, local implementation.
 
 ## 🚀 Features
 
@@ -19,8 +19,8 @@ This server provides a set of tools that the Gemini CLI can invoke autonomously:
 
 ### 1. Setup Environment
 ```bash
-git clone https://github.com/Dex383/mcp-private-tools.git
-cd mcp-private-tools
+git clone https://github.com/Dex383/gemini-cli-mcp-private-tools.git
+cd gemini-cli-mcp-private-tools
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
@@ -32,7 +32,7 @@ Depending on how you want to use the tools, choose one of the following registra
 #### 🏠 Project Scope (Local)
 Available only when the Gemini CLI is launched from the project root or its subdirectories.
 ```bash
-gemini mcp add private-tools ./venv/bin/python ./main.py --trust
+gemini mcp add gemini-cli-mcp-private-tools ./venv/bin/python ./main.py --trust
 ```
 
 #### 🌍 Global Scope (User)
@@ -40,9 +40,9 @@ Available in every terminal session, regardless of your current working director
 **Important:** You must use **absolute paths** for this configuration to work globally.
 
 ```bash
-gemini mcp add private-tools <PATH_TO_PROJECT>/venv/bin/python <PATH_TO_PROJECT>/main.py --scope user --trust
+gemini mcp add gemini-cli-mcp-private-tools <PATH_TO_PROJECT>/venv/bin/python <PATH_TO_PROJECT>/main.py --scope user --trust
 ```
-*Replace `<PATH_TO_PROJECT>` with the full path to the `mcp-private-tools` directory on your machine.*
+*Replace `<PATH_TO_PROJECT>` with the full path to the `gemini-cli-mcp-private-tools` directory on your machine.*
 
 *The `--trust` flag is recommended to avoid confirmation prompts for every tool call.*
 
