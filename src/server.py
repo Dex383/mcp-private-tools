@@ -3,7 +3,7 @@ from .tools.web_tools import register_web_tools
 from .tools.repo_tools import register_repo_tools
 
 # Initialize the central hub server
-mcp = FastMCP("PrivateTools", version="0.1.0")
+mcp = FastMCP("PrivateTools")
 
 # --- Tool Registration ---
 # Each module is responsible for registering its own set of tools.

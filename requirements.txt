@@ -1,3 +1,5 @@
 mcp
 duckduckgo_search
 trafilatura
+requests
+beautifulsoup4
