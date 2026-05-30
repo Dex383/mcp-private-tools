@@ -22,6 +22,13 @@ Tools focused on retrieving and cleaning information from the internet.
   - `url` (string): The target URL.
 - **Returns**: The cleaned main text of the page.
 
+#### `private_fetch_html`
+- **Description**: Fetches the full raw HTML content of a URL.
+- **Parameters**:
+  - `url` (string): The target URL.
+- **Returns**: The complete HTML source code of the page.
+
+
 ### Repository Module
 Tools focused on discovering code and models on GitHub and Hugging Face.
 

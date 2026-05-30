@@ -61,6 +61,22 @@ def register_web_tools(mcp: FastMCP):
             return f"Error: {str(e)}"
 
     @mcp.tool()
+    async def private_fetch_html(url: str) -> str:
+        """
+        Fetches the full raw HTML content of a URL.
+        """
+        try:
+            headers = {
+                'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+            }
+            async with httpx.AsyncClient(headers=headers, timeout=15.0) as client:
+                response = await client.get(url)
+                response.raise_for_status()
+                return response.text
+        except Exception as e:
+            return f"Error: {str(e)}"
+
+    @mcp.tool()
     async def stackoverflow_search(query: str) -> str:
         """
         Searches Stack Overflow for the most relevant questions and returns the top result and its best answer.
